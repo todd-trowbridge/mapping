@@ -39,18 +39,23 @@ Choose an option:
 0. Quit
   """)
 
+  # user input variable
   user_choice = input('')
 
+  # read
   if user_choice == '1':
     print_todos()
 
+  # create
   if user_choice == '2':
     add_todo()
 
+  # delete
   if user_choice == '3':
     print_todos()
     delete_index = int(input('Which would you like to delete?'))
     del data['todos'][delete_index - 1]
 
+  # quit
   elif user_choice == '0':
     break
