@@ -1,6 +1,6 @@
 # 1
 
-user_input = 'abcabc'
+user_input = str(input('Please enter a word: '))
 
 def word_counter(string):
   letter_dictionary = {}
@@ -14,3 +14,6 @@ def word_counter(string):
   print(letter_dictionary)
 
 word_counter(user_input)
+
+#2
+

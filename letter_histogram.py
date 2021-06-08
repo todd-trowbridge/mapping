@@ -4,10 +4,10 @@ def word_counter(string):
   letter_dictionary = {}
   for letter in string:
     if letter in letter_dictionary:
-      print('duplicate letter')
+      # print('duplicate letter')
       letter_dictionary[letter] += 1
     else:
-      print('new letter')
+      # print('new letter')
       letter_dictionary[letter] = 1
   print(letter_dictionary)
 
