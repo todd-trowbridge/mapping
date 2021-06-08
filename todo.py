@@ -11,13 +11,11 @@ with open(file_name, "r") as file_handle:
 # add todo function
 def add_todo():
   # get number of todos
-  count = len(data)
-  # set key to number of todos plus 1
-  key = count + 1
+  count = len(data['todos'])
   # ask the user for a new todo
   todo = input("What's your todo? ")
   # add the todo
-  data['todos'][count] = todo
+  data['todos'].append(todo)
   # save the data to a file
   with open(file_name, "w") as file_handle:
     json.dump(data, file_handle)
@@ -25,7 +23,7 @@ def add_todo():
 def print_todos():
   # keep track of count
   count = 1
-  # 
+  # loop through and print each todo
   for todo in data['todos']:
     print(f'{count}: {todo}')
     count += 1
@@ -37,6 +35,8 @@ Choose an option:
 2. Add Todo
 3. Remove Todo
 0. Quit
+
+Option: 
   """)
 
   # user input variable
@@ -58,4 +58,7 @@ Choose an option:
 
   # quit
   elif user_choice == '0':
+    # save the data to a file
+    with open(file_name, "w") as file_handle:
+      json.dump(data, file_handle)
     break
