@@ -14,11 +14,14 @@ with open(file_name, "r") as file_handle:
 def add_todo():
   # get number of todos
   count = len(data)
+  
   # set key to number of todos plus 1
   key = count + 1
-  value = input('what the task')
+  value = input("What's your todo? ")
+
   # add the task
   data[key] = value
+
   # save the data
   with open(file_name, "w") as file_handle:
     json.dump(data, file_handle)
