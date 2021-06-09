@@ -8,10 +8,11 @@ HO HO HO!
 Happy Holidays!
 """
 
-
 # functions
 def add_a_present():
+  # get user response
   user_response = input("What would you like from Santa this year?\n(type done to exit)\n")
+  # if anything but
   if user_response != 'done':
     data['requested_gifts'].append(user_response)
     add_a_present()
